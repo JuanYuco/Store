@@ -63,7 +63,7 @@ namespace Store.Application.Services
 
                 var productsIds = request.Items.Select(x => x.ProductId).Distinct().ToList();
                 var products = await productRepository.GetCollectionByIdAsync(productsIds);
-                if (products.Count != request.Items.Count)
+                if (products.Count != productsIds.Count)
                 {
                     response.UserMessage = "Uno de los productos enviados no existe";
                     response.HttpCode = 400;
