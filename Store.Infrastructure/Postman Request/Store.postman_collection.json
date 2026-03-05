@@ -1,0 +1,98 @@
+{
+  "info": {
+    "_postman_id": "cc9f6b38-da3a-437f-bf51-f96048857867",
+    "name": "Store",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "5294729"
+  },
+  "item": [
+    {
+      "name": "Products",
+      "item": [
+        {
+          "name": "GetAll",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://localhost:44366/api/product/GetAll",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "44366",
+              "path": [
+                "api",
+                "product",
+                "GetAll"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Order",
+      "item": [
+        {
+          "name": "Create",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"CustomerName\": \"Juan Fernando Yuco\",\r\n    \"Items\": [\r\n        {\r\n            \"ProductId\": 1,\r\n            \"Quantity\": 8\r\n        }\r\n    ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://localhost:44366/api/order/Create",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "44366",
+              "path": [
+                "api",
+                "order",
+                "Create"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GetById",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://localhost:44366/api/order/GetById?orderId=2",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "44366",
+              "path": [
+                "api",
+                "order",
+                "GetById"
+              ],
+              "query": [
+                {
+                  "key": "orderId",
+                  "value": "2"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
