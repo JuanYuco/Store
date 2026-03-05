@@ -1,5 +1,8 @@
 # Tienda.
 El presente proyecto es una tienda donde se pueden consultar productos y crear ordenes.
+Se priorizó la consulta de productos, la creación de la orden y la consulta de la orden por ID.
+Se generó una deuda técnica al no páginar los productos.
+La idea era usar Skip para gestionarlo.
 
 ## Arquitectura del proyecto.
 ### Backend.
